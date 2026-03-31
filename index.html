@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandra P | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-light: #f9f9fb;
+      --bg-dark: #1e1e2f;
+      --text-light: #333;
+      --text-dark: #fff;
+      --accent: #a5d8ff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: 0.3s;
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: inherit;
+      font-weight: 500;
+    }
+
+    .toggle {
+      cursor: pointer;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #e0f2fe;
+      margin: 5px;
+      padding: 8px 12px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .skills span:hover {
+      transform: scale(1.1);
+      background: #bae6fd;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 20px;
+      border-radius: 15px;
+      transition: 0.3s;
+      color: #333;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card:nth-child(1) { background: #ffd6e0; }
+    .card:nth-child(2) { background: #d0f4de; }
+
+    .contact i {
+      font-size: 24px;
+      margin: 10px;
+      transition: 0.3s;
+    }
+
+    .contact i:hover {
+      transform: scale(1.2);
+      color: #60a5fa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media(max-width: 600px) {
+      header { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div><strong>Sandra P</strong></div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="toggle" onclick="toggleTheme()">🌙</div>
+</header>
+
+<section id="about">
+  <h1>Hello, I'm Sandra 👋</h1>
+  <p style="text-align:center; max-width:700px; margin:auto;">
+    Aspiring Computer Science Engineer with a passion for problem-solving and rapid technology adoption. 
+    Experienced in coding through competitive programming and academic projects, with foundational knowledge. 
+    Dedicated learner seeking an entry-level position to apply technical basics and contribute to innovative solutions.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills" style="text-align:center;">
+    <span>Communication</span>
+    <span>C</span>
+    <span>Python</span>
+    <span>C++</span>
+    <span>JavaScript</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>Git</span>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+
+    <div class="card">
+      <h3>Fire Extinguisher System</h3>
+      <p>Developed using Arduino and ultrasonic sensors to detect fire hazards and respond automatically.</p>
+    </div>
+
+    <div class="card">
+      <h3>PG Finder Website</h3>
+      <p>Helps users find affordable PG accommodations in nearby locations with ease.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact" style="text-align:center;">
+    <a href="mailto:sandrasadgamaya@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/sandra-p-26372437b" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Sandra P | Portfolio
+</footer>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark');
+  }
+</script>
+
+</body>
+</html>
